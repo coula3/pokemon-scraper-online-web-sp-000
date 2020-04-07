@@ -24,6 +24,7 @@ class Pokemon
     new_pokemon.name = pokemon[0][1]
     new_pokemon.type = pokemon[0][2]
     new_pokemon.db = db
+    new_pokemon
   end
   
   #   def self.find(id_num, db)
