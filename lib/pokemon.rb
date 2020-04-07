@@ -18,13 +18,12 @@ class Pokemon
   end
   
   def self.find(id_num, db)
-    pokemon = db.execute("SELECT * FROM pokemon where id = ?", id_num)
-    pokemon1 = self.new(pokemon)
-    pokemon1.id = pokemon[0][0]
-    pokemon1.name = pokemon[0][1]
-    pokemon1.type = pokemon[0][2]
-    pokemon1.db = db
-    pokemon1
+    pokemon = db.execute("SELECT * FROM pokemon WHERE id = ?", id_num)
+    new_pokemon = self.new(pokemon)
+    new_pokemon.id = pokemon[0][0]
+    new_pokemon.name = pokemon[0][1]
+    new_pokemon.type = pokemon[0][2]
+    new_pokemon.db = db
   end
   
   #   def self.find(id_num, db)
