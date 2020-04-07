@@ -23,6 +23,7 @@ class Pokemon
     pokemon1.id = pokemon[0][0]
     pokemon1.name = pokemon[0][1]
     pokemon1.type = pokemon[0][2]
+    pokemon1.db = db
     pokemon1
   end
   
