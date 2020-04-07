@@ -1,5 +1,5 @@
 class Pokemon 
-  attr_accessor :id, :name, :type, :db, :hp
+  attr_accessor :id, :name, :type, :db
   
   def initialize(name:, type:, db:, id:nil)
     @id = id
@@ -23,7 +23,7 @@ class Pokemon
     new_pokemon.id = pokemon[0][0]
     new_pokemon.name = pokemon[0][1]
     new_pokemon.type = pokemon[0][2]
-    new_pokemon.db = db
+    db = db
     new_pokemon
   end
   
