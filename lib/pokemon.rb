@@ -14,7 +14,8 @@ class Pokemon
       WHERE (name = ?, type = ?, db = ?)
     SQL
     
-    @db.execute 
+    @db.execute(sql, self.name, self.type, self.db)
+    @id = @db.execute("SELECT ")
     
   end
   
